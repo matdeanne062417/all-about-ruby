@@ -15,7 +15,7 @@
   end
   
   class User
-    
+
     def initialize(username, password, ip_address)
      @username = username
      @password = password

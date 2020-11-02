@@ -18,8 +18,9 @@ class Bananacake < Confection
 end
 
 class Cupcake < Confection
-  def frosting
-  puts "Applying Frosting"
+  def prepare
+    super
+    puts "Applying Frosting"
   end
 end
 
@@ -27,4 +28,4 @@ banana = Bananacake.new
 cup = Cupcake.new
 banana.prepare
 cup.prepare
-cup.frosting
+
