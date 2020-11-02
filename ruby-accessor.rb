@@ -43,4 +43,4 @@ class Profile
   puts ana.name
   
   
-  
+ 
