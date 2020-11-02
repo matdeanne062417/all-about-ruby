@@ -15,9 +15,7 @@
   end
   
   class User
-
-    attr_accessor :password
-
+    
     def initialize(username, password, ip_address)
      @username = username
      @password = password
