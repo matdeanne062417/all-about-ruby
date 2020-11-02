@@ -3,7 +3,7 @@ class Profile
     def initialize(full_name, age, address, work)
       @full_name = full_name
       @age = age
-      @address = address
+      @addressruby = address
       @work = work
     end
   end
