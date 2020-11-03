@@ -1,8 +1,8 @@
 # Create objects that implement Polymorphism by Inheritance and Duck-typing
 
 # Thru DuckTyping
-class MainKitchen
-    def ingredient(food)
+class Kitchen
+    def main(food)
         food.main
     end
 end
@@ -19,12 +19,12 @@ class Poultry
     end
 end
 
-cooking = MainKitchen.new
+cooking = Kitchen.new
 burger = Meats.new
-cooking.ingredient(burger)
+cooking.main(burger)
 
 chicken_wings = Poultry.new
-cooking.ingredient(chicken_wings)
+cooking.main(chicken_wings)
 
 # Thru Inheritance
 class MainKitchen
@@ -47,7 +47,7 @@ end
 
 class Chicken < MainKitchen
     def cook
-        puts "#{@menu} will be served late because it will only take #{@cooking_time} because it is mostly made of #{@ingredient}"
+        puts "#{@menu} will be served late because it will take #{@cooking_time} for the #{@ingredient} to be fully cooked"
     end
 end
 
