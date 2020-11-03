@@ -1,7 +1,7 @@
 # Create objects that implement Polymorphism by Inheritance and Duck-typing
 
 # Thru DuckTyping
-class Kitchen
+class MainKitchen
     def ingredient(food)
         food.main
     end
@@ -19,7 +19,7 @@ class Poultry
     end
 end
 
-cooking = Kitchen.new
+cooking = MainKitchen.new
 burger = Meats.new
 cooking.ingredient(burger)
 
