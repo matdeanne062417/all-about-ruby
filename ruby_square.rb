@@ -18,27 +18,52 @@
 # 25 => true
 # 26 => false
 
-
-
 def is_square(x)
-    (0..x).each do |ctr|
-      return true if (ctr*ctr) == x
+  n = 1
+    while n <= x 
+    x = x - n
+    n = n + 2
+    return "TRUE" if x == 0
     end
-    false
+    "FALSE"
 end
 
-puts is_square(-1)
+puts is_square(100)
 puts is_square(99)
-puts is_square(5000)
-puts is_square(9801)
-puts is_square(9)
-puts is_square(88)
+puts is_square(81)
+puts is_square(9081)
+puts is_square(1111)
 
 # Flowchart
-                          # false               false                   false                   false
-    # x ----> (if 0*0 == x) ----> (if 1*1 == x) ----> (if 2*2 == x) .... ---> (if ctr*ctr == x) ---> output "false"
-                  # |                   |                     |                      |
-              # true|               true|                 true|                  true|
-                  # V                   V                     V                      V
-          # output "true"     output "true"         output "true"             output "true"
+#                          false          false
+#         x --->> (n <= x) --->> (x == 0) --->> output "FALSE"
+#         ^           |              |
+#         |      true |         true |
+#         |           v              v
+#         |--------(x - n)      output "TRUE"
+
+
+# def is_square(x)
+#     (0..x).each do |ctr|
+#       return true if (ctr*ctr) == x
+#     end
+#     false
+# end
+
+# puts is_square(-1)
+# puts is_square(99)
+# puts is_square(5000)
+# puts is_square(9801)
+# puts is_square(9)
+# puts is_square(88)
+
+# # Flowchart
+#                           # false               false                   false                   false
+#     # x ----> (if 0*0 == x) ----> (if 1*1 == x) ----> (if 2*2 == x) .... ---> (if ctr*ctr == x) ---> output "false"
+#                   # |                   |                     |                      |
+#               # true|               true|                 true|                  true|
+#                   # V                   V                     V                      V
+#           # output "true"     output "true"         output "true"             output "true"
+
+
 
