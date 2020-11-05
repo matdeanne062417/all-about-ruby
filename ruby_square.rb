@@ -23,9 +23,9 @@ def is_square(x)
     while n <= x 
     x = x - n
     n = n + 2
-    return "TRUE" if x == 0
+    return true if x == 0
     end
-    "FALSE"
+    false
 end
 
 puts is_square(100)
@@ -36,11 +36,11 @@ puts is_square(1111)
 
 # Flowchart
 #                          false          false
-#         x --->> (n <= x) --->> (x == 0) --->> output "FALSE"
+#         x --->> (n <= x) --->> (x == 0) --->> output false
 #         ^           |              |
 #         |      true |         true |
 #         |           v              v
-#         |--------(x - n)      output "TRUE"
+#         |--------(x - n)      output true
 
 
 # def is_square(x)
