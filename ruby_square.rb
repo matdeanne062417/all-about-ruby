@@ -66,4 +66,3 @@ puts is_square(1111)
 #           # output "true"     output "true"         output "true"             output "true"
 
 
-
