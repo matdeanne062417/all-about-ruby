@@ -22,15 +22,23 @@
 
 def is_square(x)
     (0..x).each do |ctr|
-      puts "#{ctr} is not the square root of #{x}" if (ctr*ctr) != x
-      return "#{ctr} is the square of #{x}" if (ctr*ctr) == x
+      return true if (ctr*ctr) == x
     end
-    "#{x} has no square root"
+    false
 end
 
-puts is_square(100)
+puts is_square(-1)
+puts is_square(99)
+puts is_square(5000)
+puts is_square(9801)
+puts is_square(9)
+puts is_square(88)
 
+# Flowchart
+                          # false               false                   false                   false
+    # x ----> (if 0*0 == x) ----> (if 1*1 == x) ----> (if 2*2 == x) .... ---> (if ctr*ctr == x) ---> output "false"
+                  # |                   |                     |                      |
+              # true|               true|                 true|                  true|
+                  # V                   V                     V                      V
+          # output "true"     output "true"         output "true"             output "true"
 
-# (1..5).each do |num|
-#   puts num
-# end
