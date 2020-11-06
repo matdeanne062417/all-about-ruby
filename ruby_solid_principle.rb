@@ -15,81 +15,89 @@ salpicao = Preparation.new(4, 15)
 puts salpicao.prep_time
 
 # Open/Closed Principle
-class Payment
-    def type(payment)
-        payment.type
+class Kitchen
+    def cooking(main_ing)
+      main_ing.cooking 
+      puts "and 20 mins waiting time" 
     end
 end
 
-class FullyPaid
-    def type
-        puts "Fully paid payment"
+class Meat
+    def cooking
+        print "15 mins cooking time "
     end
 end
 
-class Installment
-    def type
-        puts "Installment payment"
+class Seafood
+    def cooking
+        print "10 mins cooking time "
     end
 end
 
-customer_payment = Payment.new
-full = FullyPaid.new
-customer_payment.type(full)
+order = Kitchen.new
+beef = Meat.new
+tilapia = Seafood.new
 
-installment = Installment.new
-customer_payment.type(installment) 
+order.cooking(beef)
+order.cooking(tilapia) 
 
 # Liskov Substitution Principle
-class Confection
-    def prepare
-      puts "Baking at 350 degrees for 25 minutes"
+class BusFee
+    def fee
+        
+      print "Please prepare 12 pesos"
     end
   end
   
-class Bananacake < Confection
-  
+class Pasig < BusFee
+    def fee
+       super 
+       puts " and add 12 pesos more"
+    end
 end
 
-class Cupcake < Confection
-  def prepare
-    super
-    puts "Applying Frosting"
-  end
+class Marikina < BusFee
+    def fee
+      super
+      puts "and add 20 pesos more"  
+    end
 end
 
-banana = Bananacake.new
-cup = Cupcake.new
-banana.prepare
-cup.prepare
+
+pasig = Pasig.new
+marikina = Marikina.new
+
+pasig.fee
+marikina.fee
 
 # Interface Segragation Principle
 
 # Dependency Inversion Principle
-class Payment
-    def type(payment)
-        payment.type
+class Bill
+    def type(payment,amount)
+        payment.type(amount)
     end
 end
 
-class FullyPaid
-    def type
-        puts "Fully paid payment"
+class Regular
+    def type(amount)
+        puts "You have a total of #{amount}"
     end
 end
 
-class Installment
-    def type
-        puts "Installment payment"
+class Senior
+    def type(amount)
+        @total = amount * 0.85
+        puts "You have a total of #{@total}"
     end
 end
 
-customer_payment = Payment.new
-full = FullyPaid.new
-customer_payment.type(full)
+bill = Bill.new
+regular = Regular.new
+senior = Senior.new
 
-installment = Installment.new
-customer_payment.type(installment) 
+bill.type(regular, 1000)
+bill.type(senior, 1000)
 
 # --end of exercise--
 
