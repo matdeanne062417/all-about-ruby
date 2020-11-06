@@ -19,20 +19,20 @@
 # 26 => false
 
 def is_square(x)
-  n = 1
-    while n <= x 
-    x = x - n
-    n = n + 2
-    return true if x == 0
+    n = 1
+    while n <= x
+      x -= n
+      n += 2
     end
-    false
+  return true if x == 0 
+  false
 end
 
 puts is_square(100)
 puts is_square(99)
 puts is_square(81)
-puts is_square(9081)
 puts is_square(1111)
+puts is_square(0)
 
 # Flowchart
 #                          false          false
