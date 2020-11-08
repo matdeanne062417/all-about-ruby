@@ -22,3 +22,23 @@ WHERE id = 1
 
 #4
 DELETE FROM students WHERE id = 6
+
+-- display the count of ALL students
+SELECT COUNT(id)
+FROM students
+
+-- Select all students with location is MANILA
+SELECT location, first_name
+FROM students
+WHERE location = 'Manila' 
+GROUP BY first_name
+
+-- Display the average AGE of all STUDENTS
+SELECT AVG(age)
+FROM students
+
+-- Display all STUDENTS by AGE descending order
+SELECT age, first_name
+FROM students
+GROUP BY first_name
+ORDER BY (age)DESC
