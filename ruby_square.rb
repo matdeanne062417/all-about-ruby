@@ -28,11 +28,16 @@ def is_square(x)
   false
 end
 
-puts is_square(100)
-puts is_square(99)
-puts is_square(81)
-puts is_square(1111)
-puts is_square(0)
+# puts is_square(100)
+# puts is_square(99)
+# puts is_square(81)
+# puts is_square(1111)
+# puts is_square(0)
+
+
+
+
+
 
 # Flowchart
 #                          false          false
